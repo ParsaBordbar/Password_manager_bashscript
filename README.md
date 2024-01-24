@@ -1,3 +1,5 @@
+![Uploading Screenshot (419).png…]()
+
 # Bash Password Manager
 
 This repository contains a simple password manager script written in Bash. The script provides a menu-driven interface to add, retrieve, and generate passwords for different accounts.
