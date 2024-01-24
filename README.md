@@ -1,6 +1,6 @@
+![Screenshot (419)](https://github.com/ParsaBordbar/Password_manager_bashscript/assets/124056966/5947d1f2-bd54-4f9a-8d53-598f5a0440e7)
 
-# Bash P![Screenshot (419)](https://github.com/ParsaBordbar/Password_manager_bashscript/assets/124056966/5947d1f2-bd54-4f9a-8d53-598f5a0440e7)
-assword Manager
+# Bash Password Manager
 
 This repository contains a simple password manager script written in Bash. The script provides a menu-driven interface to add, retrieve, and generate passwords for different accounts.
 
