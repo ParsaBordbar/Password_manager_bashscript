@@ -1,4 +1,4 @@
-![Screenshot (419)](https://github.com/ParsaBordbar/Password_manager_bashscript/assets/124056966/5947d1f2-bd54-4f9a-8d53-598f5a0440e7)
+![Screenshot (422)](https://github.com/ParsaBordbar/Password_manager_bashscript/assets/124056966/63c67978-f022-4669-b4f4-4b1c829b6ad2)
 
 # Bash Password Manager
 
