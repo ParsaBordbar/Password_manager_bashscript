@@ -7,7 +7,6 @@ clear
 	#Font Variations
 	bold="\e[1m"
 	rbold="\e[22m"
-@@ -17,6 +14,15 @@ clear
 	blackBg="\e[48;2;0;0;0m"
 	reset="\e[m"
 
