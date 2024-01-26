@@ -77,16 +77,18 @@ generate_hash(){
 	password=$(grep "^$account:" "$password_database" | cut -d " " -f 2)
 	if [ -n "$password" ]; 
 	then
-		echo -n "$password" | sha256sum
+		echo -e -n "$password" | sha256sum
+		echo -e "\n"
 	else
-		echo -e "\nPassword not found for $account."
+		echo -e "\nPassword not found for $account.\n"
 	fi
 }
 
 show_database(){
 	clear
-	echo -e "${blackBg}${yellowText}${bold}Displaying Password Database${rbold}${reset}${reset}\n"
+	echo -e "\n${blackBg}${yellowText}${bold}Displaying Password Database${rbold}${reset}${reset}\n"
 	cat "$password_database"
+	echo -e "\n"
 }
 
 
@@ -114,8 +116,4 @@ main_menu(){
 	done
 }
 
-}
-
 main_menu
-
-Can you suggest and add a features to this bash scitp code for me?
