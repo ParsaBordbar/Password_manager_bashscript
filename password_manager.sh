@@ -54,17 +54,14 @@ get_password(){
 	clear
 	echo -e "${blackBg}${yellowText}${bold}Retrieving password${rbold}${reset}${reset}\n"
 	read -p "Enter the account name: " account
-	read -sp "Enter the password: " password
-	hashed_password=$(grep "^$account:" "$password_database" | cut -d ":" -f 2)
-	input_password_hash=$(echo -n "$password" | openssl dgst -sha256)
-	if [ "$input_password_hash" == "$hashed_password" ]; 
+	password=$(grep "^$account:" "$password_database" | cut -d ":" -f 2)
+	if [ -n "$password" ]; 
 	then
-        	echo -e "\nPassword for $account is correct.\n"
+        	echo -e "\nPassword for $account:\n ${yellowText} $password ${reset}\n"
 	else
-        	echo -e "\nIncorrect password for $account."
+        	echo -e "\nPassword not found for $account."
 	fi
 }
-
 
 # Function to generate a password
 generate_password(){
