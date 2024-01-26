@@ -44,8 +44,8 @@ add_new_password(){
 	echo -e "${blackBg}${yellowText}${bold}Adding new password${rbold}${reset}${reset}\n"
 	read -p "Enter the account name: " account 
 	read -sp "Enter the password: " password
-	hashed_password=$(echo -n "$password" | openssl dgst -sha256)
-	echo "$account: $hashed_password" >> "$password_database"
+	encoded_password=$(echo -n "$password" | base64)
+	echo "$account: $encoded_password" >> "$password_database"
 	echo -e "\nThe account $account was added successfully.\n"
 }
 
@@ -54,14 +54,16 @@ get_password(){
 	clear
 	echo -e "${blackBg}${yellowText}${bold}Retrieving password${rbold}${reset}${reset}\n"
 	read -p "Enter the account name: " account
-	password=$(grep "^$account:" "$password_database" | cut -d ":" -f 2)
-	if [ -n "$password" ]; 
+	encoded_password=$(grep "^$account:" "$password_database" | cut -d ":" -f 2)
+	if [ -n "$encoded_password" ]; 
 	then
-        	echo -e "\nPassword for $account:\n ${yellowText} $password ${reset}\n"
+		decoded_password=$(echo -n "$encoded_password" | base64 --decode)
+        	echo -e "\nPassword for $account:\n ${yellowText} $decoded_password ${reset}\n"
 	else
         	echo -e "\nPassword not found for $account."
 	fi
 }
+
 
 # Function to generate a password
 generate_password(){
