@@ -23,7 +23,6 @@ echo -e "${yellowText}
 #This is the database of our project:
 password_database="password_database.txt"
 
-@@ -28,48 +34,57 @@ fi
 #Makes new password
 add_new_password(){
 	clear
