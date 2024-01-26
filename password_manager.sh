@@ -31,6 +31,8 @@ then
 	touch "$password_database"
 fi
 
+chmod 600 "$password_database"
+
 #Makes new password
 add_new_password(){
 	clear
@@ -67,6 +69,27 @@ generate_password(){
 	echo -e "${yellowBg}$account: $password" >> "$password_database ${reset}"
 }
 
+#Hashes your desired passwords using sha256
+generate_hash(){
+	clear
+	echo -e "${blackBg}${yellowText}${bold}Generating Hash${rbold}${reset}${reset}\n"
+	read -p "Enter the account name: " account
+	password=$(grep "^$account:" "$password_database" | cut -d " " -f 2)
+	if [ -n "$password" ]; 
+	then
+		echo -n "$password" | sha256sum
+	else
+		echo -e "\nPassword not found for $account."
+	fi
+}
+
+show_database(){
+	clear
+	echo -e "${blackBg}${yellowText}${bold}Displaying Password Database${rbold}${reset}${reset}\n"
+	cat "$password_database"
+}
+
+
 #Here we are Making a Menu for it
 main_menu(){
 	while true;
@@ -75,16 +98,22 @@ main_menu(){
 		echo -e "1-Add new password"
 		echo -e "2-Retrive password"
 		echo -e "3-Generate password"
-		echo -e "4-Quit\n"
+		echo -e "4-Show password database"
+		echo -e "5-Generate hash for password"
+		echo -e "6-Quit\n"
         	read -p "Select an option: " choice	
 		case $choice in 
 			1) add_new_password;;
 			2) get_password;;
 			3) generate_password;;
-			4) exit;;
+			4) show_database;;
+			5) generate_hash;;
+			6) exit;;
 			*) echo "Invalid Option"
 		esac
 	done
+}
+
 }
 
 main_menu
