@@ -1,13 +1,21 @@
-![Screenshot (422)](https://github.com/ParsaBordbar/Password_manager_bashscript/assets/124056966/63c67978-f022-4669-b4f4-4b1c829b6ad2)
+
+![banner](https://github.com/ParsaBordbar/Password_manager_bashscript/assets/124056966/22c412ca-d70e-412b-9e01-0a03b43fe733)
 
 # Bash Password Manager
 
 This repository contains a simple password manager script written in Bash. The script provides a menu-driven interface to add, retrieve, and generate passwords for different accounts.
 
 ## Features
+![menu](https://github.com/ParsaBordbar/Password_manager_bashscript/assets/124056966/1c6c502d-9406-4fa5-919a-511bd619267f)
+
 - **Add New Password**: This feature allows you to add a new password for a specific account.
+
 - **Retrieve Password**: This feature retrieves the password for a specified account.
+
 - **Generate Password**: This feature generates a random password for a specified account.
+
+
+![hasher](https://github.com/ParsaBordbar/Password_manager_bashscript/assets/124056966/1515364a-8f86-4a55-ba97-9dd9b451bfc1)  
 - **Generate Hash:** This function generates a hash for the password of a specified account. It first clears the screen, then prompts the user to enter the account name. If the account exists in the password database, it generates a SHA256 hash of the password and displays it. If the account does not exist, it informs the user that the password was not found.
 
 - **Show Database:** This function displays the entire password database. It first clears the screen, then reads and displays the contents of the password database file.
