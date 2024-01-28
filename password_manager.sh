@@ -95,16 +95,17 @@ log_in(){
 	read -p  "Enter the 'KEY' to continue: " input
 	key="vader"
 	salt="sith"
-	hashed_input=${echo "${key}${salt}" | sha256sum} 
-	hashed_key=${echo "${input}${salt}" | sha256sum} 
+	hashed_input=$(echo -n "${key}${salt}" | sha256sum) 
+	hashed_key=$(echo -n "${input}${salt}" | sha256sum) 
 
-	while [ hashed_input != hashed_key ];
+	while [ "$hashed_input" != "$hashed_key" ];
 	do
 		read -p  "Enter the 'KEY' to continue: " input
-		hashed_key=${echo "${input}${salt}" | sha256sum} 
+		hashed_key=$(echo -n "${input}${salt}" | sha256sum) 
 	done
 	echo -e "${yellowBg}Welcome!${reset}"
 }
+
 
 #Here we are Making a Menu for it
 main_menu(){
