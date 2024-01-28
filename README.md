@@ -8,6 +8,13 @@ This repository contains a simple password manager script written in Bash. The s
 - **Add New Password**: This feature allows you to add a new password for a specific account.
 - **Retrieve Password**: This feature retrieves the password for a specified account.
 - **Generate Password**: This feature generates a random password for a specified account.
+- **Generate Hash:** This function generates a hash for the password of a specified account. It first clears the screen, then prompts the user to enter the account name. If the account exists in the password database, it generates a SHA256 hash of the password and displays it. If the account does not exist, it informs the user that the password was not found.
+
+- **Show Database:** This function displays the entire password database. It first clears the screen, then reads and displays the contents of the password database file.
+
+- **Log In:** This function handles user authentication. It prompts the user to enter a key. The entered key is hashed and compared with a pre-defined hashed key. If the keys match, the user is granted access and a welcome message is displayed. If the keys do not match, the user is prompted to enter the key again.
+
+Return to Main Menu: This function checks if the user input is “…”. If it is, the function returns to the main menu.
 
 ## Usage
 1. Clone the repository to your local machine.
