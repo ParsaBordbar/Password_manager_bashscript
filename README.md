@@ -22,7 +22,7 @@ This repository contains a simple password manager script written in Bash. The s
 
 - **Log In:** This function handles user authentication. It prompts the user to enter a key. The entered key is hashed and compared with a pre-defined hashed key. If the keys match, the user is granted access and a welcome message is displayed. If the keys do not match, the user is prompted to enter the key again.
 
-Return to Main Menu: This function checks if the user input is “…”. If it is, the function returns to the main menu.
+- **Return to Main Menu:** This function checks if the user input is “…”. If it is, the function returns to the main menu.
 
 ## Usage
 1. Clone the repository to your local machine.
