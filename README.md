@@ -24,20 +24,8 @@ This repository contains a simple password manager script written in Bash. The s
 
 - **Return to Main Menu:** This function checks if the user input is “…”. If it is, the function returns to the main menu.
 
-Apologies for the confusion. Let's format the setup instructions and usage section clearly in Markdown format for your README.md:
 
-```markdown
-# Password Manager
-
-This repository contains a simple password manager script (`password_manager.sh`) that allows you to manage passwords securely from the command line.
-
-## Setup Instructions
-
-### Prerequisites
-
-Make sure you have `mysql-client` installed on your system to interact with MySQL databases.
-
-```bash
+```
 sudo apt-get update
 sudo apt-get install mysql-client
 ```
