@@ -25,12 +25,15 @@ This repository contains a simple password manager script written in Bash. The s
 - **Return to Main Menu:** This function checks if the user input is “…”. If it is, the function returns to the main menu.
 
 
+
+### Environment Setup
+
+Firstly be sure you have mysql on you mechine if not install it using:
 ```
 sudo apt-get update
 sudo apt-get install mysql-client
 ```
 
-### Environment Setup
 
 1. **Clone the Repository:**
 
